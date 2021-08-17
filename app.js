@@ -1,4 +1,6 @@
 const inquirer = require("inquirer");
+const createFile = require('./utils/write-file.js');
+const generatePage = require('./utils/generate-markdown.js');
 
 // TODO: Create an array of questions for user input
 const readMePrompt = () => {
@@ -59,30 +61,47 @@ const readMePrompt = () => {
         message: 'Please enter your email address'
     }
 ])
+    .then(readmeData => {
+        console.log(readmeData);
+        return readmeData;
+    })
 
 };
 
-const mockData =  {
-    title: 'Test Title',
-    description: 'Description',
-    installation: 'STEP 1 STEP 2',
-    usage: 'useful for:',
-    contributing: 'me, chuck berry, jonas',
-    tests: 'example',
-    license: 'NPM',
-    github: 'Challett1129',
-    email: 'collinhallett@gmail.com'
-  }
+// const mockData =  {
+//   title: 'Title',
+//   description: 'This is a test',
+//   installation: 'run it',
+//   usage: 'testing my own product',
+//   contributing: 'me, myself, I ',
+//   tests: 'run it',
+//   license: 'NPM',
+//   github: 'Challett1129',
+//   email: 'collinhallett@gmail.com'
+// }
 
-readMePrompt()
-    .then( log => {
-        console.log(log);
-    })
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+readMePrompt()
+ .then(readmeData => {
+     console.log(readmeData);
+     return generatePage(readmeData);
+ })
+ .then(pageContent => {
+     console.log(pageContent);
+     return createFile(pageContent);
+ })
+ .catch(err => {
+     console.log(err);
+ })
+}
 
 // Function call to initialize app
 init();
+
