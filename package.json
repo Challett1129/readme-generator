@@ -1,14 +1,23 @@
 {
-  "name": "static-site",
+  "name": "readme-generator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "[How to create a Professional README](./readme-guide.md)",
+  "main": "app.js",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Challett1129/readme-generator.git"
+  },
+  "author": "Collin",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+  "bugs": {
+    "url": "https://github.com/Challett1129/readme-generator/issues"
+  },
+  "homepage": "https://github.com/Challett1129/readme-generator#readme"
 }
