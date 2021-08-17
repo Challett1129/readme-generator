@@ -47,10 +47,32 @@ const readMePrompt = () => {
         name: 'license',
         message: 'What license does your project have, if any?',
         choices: ['None', 'NPM', 'REUSE Compliance', 'GitHub', 'Crates.io']
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Please provide your GitHub username'
+    }, 
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email address'
     }
 ])
+
 };
 
+const mockData =  {
+    title: 'Test Title',
+    description: 'Description',
+    installation: 'STEP 1 STEP 2',
+    usage: 'useful for:',
+    contributing: 'me, chuck berry, jonas',
+    tests: 'example',
+    license: 'NPM',
+    github: 'Challett1129',
+    email: 'collinhallett@gmail.com'
+  }
 
 readMePrompt()
     .then( log => {
