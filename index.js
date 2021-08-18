@@ -68,17 +68,17 @@ const readMePrompt = () => {
 
 };
 
-const mockData =  {
-  title: 'Title',
-  description: 'This is a test',
-  installation: 'run it',
-  usage: 'testing my own product',
-  contributing: 'me, myself, I ',
-  tests: 'run it',
-  license: 'NPM',
-  github: 'Challett1129',
-  email: 'collinhallett@gmail.com'
-}
+// const mockData =  {
+//   title: 'Title',
+//   description: 'This is a test',
+//   installation: 'run it',
+//   usage: 'testing my own product',
+//   contributing: 'me, myself, I ',
+//   tests: 'run it',
+//   license: 'NPM',
+//   github: 'Challett1129',
+//   email: 'collinhallett@gmail.com'
+// }
 
 
 // TODO: Create a function to write README file
